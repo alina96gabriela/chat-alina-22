@@ -1,0 +1,55 @@
+*{
+    margin: 0
+}
+
+body{
+    width: 100%;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.app-mensajes {
+    overflow-y: scroll;
+    padding: 15px;
+    width: auto;
+    bottom: 0;
+    height: calc(100vh - 61px - 78px);
+    margin: 5px;
+}
+
+#msg{
+    background-color: rgb(199, 190, 190);
+    width: max-content;
+    height: max-content;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+b.nom{
+    background-color: rgb(217, 211, 211);
+    border-radius: 5px;
+    margin: 5px;
+}
+.mens{
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+}

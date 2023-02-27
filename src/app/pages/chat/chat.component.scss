@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,800&display=swap");
+
+
+
+#name {
+    border-radius: 5px;
+    align-content: end;
+}
+
+div {
+    display: base-container;
+}
+
+* {
+    box-sizing: unset;
+    font-size: x-large;
+}
+
+div.sticky {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    align-items: baseline;
+}
+
+.inp{
+    border-radius: 15px;
+    height: 44px;
+    width: 60%;
+}
+
+@media screen and (max-width:480px) {
+    body {
+        font-size: 80%; // achicamos la fuente en pantallas pequeñas 
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width:1024px) {
+    body {
+        font-size: 90%; // achicamos la fuente en pantallas pequeñas 
+    }
+}
+
+/*
+.app-mensajes {
+    overflow-y: scroll;
+    height: fit-content;
+    padding: 5px;
+    max-width: 90%;
+    max-height: 50%;
+}
+
+.app-mensajes::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.app-mensajes::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.app-mensajes::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.container{
+    max-width: fit-content;
+    max-height: 90%;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}
+*/
