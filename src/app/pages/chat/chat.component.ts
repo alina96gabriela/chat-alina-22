@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { MessagesService } from 'src/app/services/messages.service';
 import { Message } from 'src/app/interfaces/message';
-
-import { LoginComponent } from '../login/login.component';
-
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -19,7 +17,7 @@ export class ChatComponent implements OnInit {
   messageInput = new FormControl('');
   ind: any;
 
-  constructor( private messagesService: MessagesService, private loginComp: LoginComponent) {
+  constructor( private messagesService: MessagesService, private localStorageService: LocalStorageService) {
     //Primera linea dentro del constructor
     //private messagesService: MessagesService, private loginComp: LoginComponent
     this.messagesService.getMensajes().subscribe(m => this.messages = m)
@@ -34,11 +32,16 @@ export class ChatComponent implements OnInit {
     const messageInput: any = document.querySelector('#name');
     console.log(messageInput.value)
     const date = Date.now().toString();
-    const usuario = this.loginComp.getUser()!.toString().replace(/['"]+/g, '');
+    const usuario = this.getUser()!.toString().replace(/['"]+/g, '')
+    // const usuario = this.loginComp.getUser()!.toString().replace(/['"]+/g, '');
     this.messagesService.addMessage(usuario,date,messageInput.value);    
   }
 
+  getUser(){
+    return this.localStorageService.getItem('Usuario');
+  }
 }
+
 
 /*
 document.querySelector('#send').forEach(node => node.addEventListener('keypress', e => {

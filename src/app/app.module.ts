@@ -13,24 +13,18 @@ import { environment } from 'src/environments/environment';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
-import {DatabaseModule} from '@angular/fire/database'
-import { MessagesModule } from './pages/messages/messages.module';
+import { DatabaseModule } from '@angular/fire/database'
 import { MessagesService } from './services/messages.service';
-import { LoginComponent } from './pages/login/login.component';
-import { ChatComponent } from './pages/chat/chat.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MessagesComponent } from './pages/messages/messages.component';
 
 import { LoginModule } from './pages/login/login.module';
+import { ChatModule } from './pages/chat/chat.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        LoginComponent,
-        ChatComponent,
-        MessagesComponent
+        AppComponent
     ],
     providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         MessagesService
@@ -43,10 +37,9 @@ import { LoginModule } from './pages/login/login.module';
         AngularFireModule.initializeApp(environment.firebaseConfig),
         AngularFireAuthModule,
         DatabaseModule,
-        ReactiveFormsModule,
         HttpClientModule,
-        MessagesModule,
-        LoginModule
+        LoginModule,
+        ChatModule
     ]
 })
 export class AppModule {}
