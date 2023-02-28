@@ -31,6 +31,14 @@ div.sticky {
     width: 60%;
 }
 
+app-messages{
+    height: calc(100vh - 124px);
+}
+
+ion-item{
+    width: calc(100vw - 150px);
+}
+
 @media screen and (max-width:480px) {
     body {
         font-size: 80%; // achicamos la fuente en pantallas pequeñas 

@@ -22,12 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './pages/login/login.module';
 import { ChatModule } from './pages/chat/chat.module';
 
+import {LoginService} from './services/login.service'
+
 @NgModule({
     declarations: [
         AppComponent
     ],
     providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-        MessagesService
+        MessagesService,
+        LoginService
     ],
     bootstrap: [AppComponent],
     imports: [

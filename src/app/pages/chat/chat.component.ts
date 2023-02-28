@@ -3,6 +3,8 @@ import {FormControl, Validators} from '@angular/forms';
 import { MessagesService } from 'src/app/services/messages.service';
 import { Message } from 'src/app/interfaces/message';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { LoginService } from 'src/app/services/login.service';
+
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -17,7 +19,7 @@ export class ChatComponent implements OnInit {
   messageInput = new FormControl('');
   ind: any;
 
-  constructor( private messagesService: MessagesService, private localStorageService: LocalStorageService) {
+  constructor( private messagesService: MessagesService, private localStorageService: LocalStorageService, private logIn: LoginService) {
     //Primera linea dentro del constructor
     //private messagesService: MessagesService, private loginComp: LoginComponent
     this.messagesService.getMensajes().subscribe(m => this.messages = m)
@@ -39,6 +41,10 @@ export class ChatComponent implements OnInit {
 
   getUser(){
     return this.localStorageService.getItem('Usuario');
+  }
+
+  logOut(){
+    this.logIn.logout();
   }
 }
 

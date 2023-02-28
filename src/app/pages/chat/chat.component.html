@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Chat</ion-title>
-    <ion-button>LogOut</ion-button>
+    <ion-button slot="secondary" (click)="logOut()">LogOut</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,9 @@
   <app-messages></app-messages>
   
   <div class="sticky">
-    <ion-input class="inp" id="name" type="text" [formControl]="messageInput"></ion-input>
-    <ion-button class="btn btn-primary" id="send" (click)="sendMessage()">Send</ion-button>
+    <ion-item fill="outline">
+      <ion-input class="inp" id="name" type="text" [formControl]="messageInput"></ion-input>
+    </ion-item>
+    <ion-button slot="secondary" id="send" (click)="sendMessage()">Send</ion-button>
   </div>
 </ion-content>
