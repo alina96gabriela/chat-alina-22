@@ -32,11 +32,13 @@ export class ChatComponent implements OnInit {
     //console.log(this.messageInput.value);
     //mes.addMessage(this.messageInput.value);
     const messageInput: any = document.querySelector('#name');
-    console.log(messageInput.value)
+    const text = messageInput.value;
+ 
     const date = Date.now().toString();
     const usuario = this.getUser()!.toString().replace(/['"]+/g, '')
     // const usuario = this.loginComp.getUser()!.toString().replace(/['"]+/g, '');
-    this.messagesService.addMessage(usuario,date,messageInput.value);    
+    this.messagesService.addMessage(usuario,date,text);
+    this.messageInput.setValue('');    
   }
 
   getUser(){

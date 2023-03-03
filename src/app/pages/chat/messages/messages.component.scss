@@ -1,17 +1,9 @@
-*{
+* {
     margin: 0
 }
 
-body{
+body {
     width: 100%;
-}
-
-div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    padding: 5px;
-    font-size: 20px;
 }
 
 .app-mensajes {
@@ -23,7 +15,7 @@ div.sticky {
     margin: 5px;
 }
 
-#msg{
+#msg {
     background-color: rgb(199, 190, 190);
     width: max-content;
     height: max-content;
@@ -32,28 +24,30 @@ div.sticky {
     margin: 5px;
 }
 
-b.nom{
+b.nom {
     background-color: rgb(217, 211, 211);
     border-radius: 5px;
     margin: 5px;
 }
-.mens{
+
+.mens {
     border-radius: 5px;
     margin: 5px;
 }
 
-ion-content{
-    height: calc(100vh - 60px);
+ion-content {
+    height: calc(100vh - 124px);
 }
 
-@media screen and (min-width: 1024px) {
-    
+ion-label{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-}
+@media screen and (min-width: 1024px) {}
 
-@media screen and (max-width: 767px) {
-    
-}
+@media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+@media screen and (max-width: 767px) {}

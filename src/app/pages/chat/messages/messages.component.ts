@@ -30,6 +30,7 @@ export class MessagesComponent implements OnInit {
   onIonInfinite(e: any) {
     setTimeout(() => {
       (e as InfiniteScrollCustomEvent).target.complete();
-    }, 500);
+    });
   }
+
 }

@@ -22,7 +22,11 @@ div.sticky {
     padding: 5px;
     font-size: 20px;
     width: 100%;
-    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .inp{
@@ -31,12 +35,12 @@ div.sticky {
     width: 60%;
 }
 
-app-messages{
-    height: calc(100vh - 124px);
+#send{
+    height: 44px;
 }
 
 ion-item{
-    width: calc(100vw - 150px);
+    width: 85%;
 }
 
 @media screen and (max-width:480px) {

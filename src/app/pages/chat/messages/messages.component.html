@@ -1,25 +1,18 @@
-<!-- <div class="app-mensajes" id="app-mensajes">
-  <div class="text-start" *ngFor="let message of messages">
-    <div id="msg">
-      <b class="nom">{{message.user}}:<br>
-      </b>
-      <p class="mens">{{message.text}}</p>
-    </div>
-  </div>
-</div> -->
-
-
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let message of messages">
-      <ion-label>
-        {{message.user}}
-      </ion-label>
-      <ion-label>
-        {{message.text}}
+    <ion-item lines="none" *ngFor="let message of messages">
+      <ion-label class="ion-text-wrap" *ngIf="message.user">
+        <p class="fw-bold">
+          {{message.user}}:
+        </p>
+        <p>
+          {{message.text}}
+        </p>
+        <br>
       </ion-label>
     </ion-item>
   </ion-list>
+
   <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>
   </ion-infinite-scroll>

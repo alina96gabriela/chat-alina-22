@@ -28,3 +28,11 @@
 *{
     box-sizing: border-box;
 }
+
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}

@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Chat</ion-title>
-    <ion-button slot="secondary" (click)="logOut()">LogOut</ion-button>
+    <ion-button slot="secondary" (click)="logOut()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -10,8 +12,10 @@
   
   <div class="sticky">
     <ion-item fill="outline">
-      <ion-input class="inp" id="name" type="text" [formControl]="messageInput"></ion-input>
+      <ion-input class="inp" id="name" type="text" [formControl]="messageInput" (keyup.enter)="sendMessage()"></ion-input>
     </ion-item>
-    <ion-button slot="secondary" id="send" (click)="sendMessage()">Send</ion-button>
+    <ion-button slot="end" id="send" (click)="sendMessage()">
+      <ion-icon name="send"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>
