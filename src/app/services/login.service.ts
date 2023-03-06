@@ -21,23 +21,6 @@ export class LoginService {
     this.auth.authState.subscribe((user) => {
       this.userData = user!;
     });
-
-    /*this.googleButton?.addEventListener('click', async (e) => {
-      e.preventDefault();
-
-      try {
-        const credentials = await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-        console.log(credentials);
-        console.log("google sign in");
-
-        const modalInstance = bootstrap.Modal.getInstance(this.googleButton?.closest('.modal'));
-        modalInstance.hide();
-      }
-      catch(e){
-        console.log(e);
-      }
-      })
-      */
   }
   
   ngOnInit() { }

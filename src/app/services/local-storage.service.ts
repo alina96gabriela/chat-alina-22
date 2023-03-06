@@ -23,4 +23,8 @@ export class LocalStorageService {
   public removeAll() {
     localStorage.clear();
   }
+
+  public getUser(){
+    return this.getItem('Usuario')!.toString().replace(/['"]+/g, '')
+  }
 }

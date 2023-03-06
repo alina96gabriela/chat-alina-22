@@ -39,7 +39,14 @@ ion-content {
     height: calc(100vh - 124px);
 }
 
-ion-label{
+.user{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.otherUser{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

@@ -28,21 +28,19 @@ export class ChatComponent implements OnInit {
   ngOnInit() { }
 
   sendMessage() {
-    //console.log(this.messagesService.getMessages());
-    //console.log(this.messageInput.value);
     //mes.addMessage(this.messageInput.value);
     const messageInput: any = document.querySelector('#name');
     const text = messageInput.value;
  
     const date = Date.now().toString();
-    const usuario = this.getUser()!.toString().replace(/['"]+/g, '')
+    const usuario = this.getUser();
     // const usuario = this.loginComp.getUser()!.toString().replace(/['"]+/g, '');
     this.messagesService.addMessage(usuario,date,text);
     this.messageInput.setValue('');    
   }
 
   getUser(){
-    return this.localStorageService.getItem('Usuario');
+    return this.localStorageService.getUser();
   }
 
   logOut(){
